@@ -191,7 +191,7 @@ hostname -I | awk '{print $1}'
 
 Repeat these steps for both `node2` and `node3`.
 
-### 4.1 SSH to Worker Node
+### 4.1 SSH to Worker Node or EC2 Instance Connect
 
 ```bash
 ssh -i your-key.pem ubuntu@<worker-public-ip>
