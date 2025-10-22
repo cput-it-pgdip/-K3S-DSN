@@ -98,13 +98,14 @@ Configure the security group attached to your instances with the following rules
 
 | Type | Protocol | Port Range | Source | Description |
 |------|----------|------------|--------|-------------|
-| SSH | TCP | 22 | Your IP | SSH access |
+| SSH | TCP | 22 | 0.0.0.0/0 | SSH access |
 | Custom TCP | TCP | 6443 | Security Group | Kubernetes API |
 | Custom TCP | TCP | 10250 | Security Group | Kubelet metrics |
 | Custom TCP | TCP | 8472 | Security Group | Flannel VXLAN |
 | Custom UDP | UDP | 8472 | Security Group | Flannel VXLAN |
 | Custom TCP | TCP | 2379-2380 | Security Group | etcd |
 | Custom TCP | TCP | 30000-32767 | 0.0.0.0/0 | NodePort Services (optional) |
+| Custom ICMP | TCP | ALL |
 
 **Outbound Rules:**
 - Allow all outbound traffic
